@@ -43,19 +43,22 @@ num = 1;
 console.log("num = num * 11:num *= 11", num *= 11);
 num = 1;
 console.log("num = num / 11:num /= 11", num /= 11);
+
+                           /*постарайтесь использовать ++, как в задании (в след. строке --)*/
+        /*Позорный мне позор, недочитала задание ))))*/  
 num = 1;
-console.log("num = num + 1:num += 1", num += 1);
+console.log("num = num + 1:++num", ++num);
 num = 1;
-console.log("num = num - 1:num -= 1", num -= 1);
+console.log("num = num - 1:--num", --num);
 
 
 /*******************************************************************
 Таски на prompt:
 1) Запросить число у пользователя, возвести его в квадрат и вывести*/
 
-let l = prompt( "Please, input any number:");
-let m;
-m = l * l;
+                            /*рекомендуем использовать конст.*/
+const l = prompt( "Please, input any number:");
+const m = l * l;
 alert(`The squared is ${m}!`);
 
 
@@ -94,12 +97,14 @@ if (i === +r){
 Если переменная test не равна true, то выведите 'Верно', иначе выведите 'Неверно'
 Проверьте работу скрипта при test, равном true, false.*/
 
-let test = prompt('Enter true or false');
+                                    /*лучше явно задайте значение переменной*/
+
+let test = true;
 if (Boolean(test)) {alert ('Right');}
 else { 
     alert('Wrong')};
 
-const test1 = prompt ('Enter true or false');
+const test1 = false;
 if (!Boolean(test1)) {alert ('Right');}
 else {
     alert('Wrong')
@@ -144,8 +149,8 @@ console.log('1.Цикл уменьшения. Вариант 3');
 let i1 = 25;
 
 do {
- i1--;
  console.log('i1:', i1);
+ i1-- ;
 } while (i1 > 0);
 
 
@@ -187,11 +192,12 @@ console.log('result1:', result1)
       
 console.log('2.Найти сумму чисел в пределах от 1 до 100. Вариант 2');
 
+                            /*отступы забыли       */
 let result2 = 0;
 let x1 = 0
 while( x1 <= 100){
-result2 += x1;
-x1++;
+    result2 += x1;
+    x1++;
 };
 console.log('result2:', result2);
 
